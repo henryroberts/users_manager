@@ -81,7 +81,7 @@ class users extends database {
             $this->query($sql);
         }
     }
-    public function add_users() {
+    public function edit_users() {
         $sql = "SELECT * FROM users WHERE users_acc = '$this->users_acc' AND users_id != '$this->users_id'";
         $this->query($sql);
         if($this->num_rows() > 0) {
