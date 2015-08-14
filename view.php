@@ -6,8 +6,8 @@
     <link href="style/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h1>Users Manager</h1>
-<table class="rwd-table">
+<h1 style="margin-left: 469px;">Users Manager</h1>
+<table class="rwd-table" style="margin: auto;">
     <tr>
         <th>ID</th>
         <th>Name</th>
