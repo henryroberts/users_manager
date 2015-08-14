@@ -65,7 +65,7 @@ class users extends database {
         $this->query($sql);
         if($this->num_rows() > 0) {
             $_SESSION['usersacc'] = $this->users_acc;
-            $_SESSION['userpass'] = $this->users_pass;
+            $_SESSION['level'] = $this->users_lv;
         }
         else {
             return 'acc not valid';
