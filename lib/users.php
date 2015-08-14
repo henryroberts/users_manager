@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Anh ??c
+ * User: Anh Đức
  * Date: 8/8/2015
  * Time: 10:20 PM
  */
@@ -61,12 +61,14 @@ class users extends database {
     }
 
     public function login() {
-        $sql = "SELECT * FROM users WHERE users_acc = '$this->users_acc' AND users_pass = '$this->users_pass' AND users_lv = 2";
+        $sql = "SELECT * FROM users WHERE account = '$this->users_acc' AND password = '$this->users_pass'";
         $this->query($sql);
         if($this->num_rows() > 0) {
             $_SESSION['usersacc'] = $this->users_acc;
-            $_SESSION['userslv'] = 2;
-            return 'user valid';
+            $_SESSION['userpass'] = $this->users_pass;
+        }
+        else {
+            return 'acc not valid';
         }
     }
     public function add_user() {

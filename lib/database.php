@@ -10,7 +10,7 @@ class database {
     const host = 'localhost';
     const user = 'root';
     const pass = '';
-    const data = 'qlthanhvien';
+    const data = 'manage_users';
     public $conn;
     public $result;
     public  function connect() {
@@ -40,11 +40,6 @@ class database {
         if($this->result){
             $row = mysql_fetch_assoc($this->result);
             return $row;
-        }
-    }
-    function __destruct() {
-        if($this->conn) {
-            mysql_close($this->conn);
         }
     }
 }
